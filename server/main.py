@@ -1,10 +1,12 @@
 from flask import Flask
+from flask_cors import CORS
 from flask import request, jsonify
 import os
 import json
 import datetime
 MAX_LEN = 120
 app = Flask(__name__)
+CORS(app)
 app.config['JSON_AS_ASCII'] = False
 ROOT_DIR = os.path.dirname(os.getcwd())
 DATA_DIR = os.path.join(ROOT_DIR, 'data')
